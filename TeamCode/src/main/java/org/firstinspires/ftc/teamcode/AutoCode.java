@@ -11,6 +11,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
+import org.firstinspires.ftc.teamcode.module.Bartender;
+
 @TeleOp(name = "Autonomous Code", group = "code")
 public class AutoCode extends LinearOpMode {
 
@@ -45,6 +47,13 @@ public class AutoCode extends LinearOpMode {
 
     public boolean InitializeBartender() {
 
+        // Create Singleton
+        Bartender.Singleton = new Bartender();
+
+        // Add Configuration
+
+
+        // Return True
         return true;
 
     }
