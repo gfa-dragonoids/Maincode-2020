@@ -12,6 +12,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.teamcode.module.Bartender;
+import org.firstinspires.ftc.teamcode.module.Input;
 
 @TeleOp(name = "Autonomous Code", group = "code")
 public class AutoCode extends LinearOpMode {
@@ -19,7 +20,7 @@ public class AutoCode extends LinearOpMode {
     // I wish this was C# because the code would be so much cleaner
     @Override public void runOpMode() {
 
-        // Initialize the Bartender
+        // Initialize the Bartender/ Check if Initializing Failed
         if (!InitializeBartender()) {
 
             FailTeleop("Failed to Initialize the Bartender.");
@@ -27,7 +28,7 @@ public class AutoCode extends LinearOpMode {
 
         }
 
-        // Initialize Modules
+        // Initialize Modules/ Check if Initializing Failed
         if (!InitializeModules()) {
 
             FailTeleop("Failed to Initialize the Modules.");
@@ -61,7 +62,7 @@ public class AutoCode extends LinearOpMode {
     public boolean InitializeModules() {
 
         // Initialize Modules
-
+        if (Input.Singleton == null) Input.Singleton = new Input();
 
         return true;
 
