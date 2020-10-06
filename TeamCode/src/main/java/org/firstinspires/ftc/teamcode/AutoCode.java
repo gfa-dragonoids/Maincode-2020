@@ -48,10 +48,10 @@ public class AutoCode extends LinearOpMode {
     public boolean InitializeBartender() {
 
         // Create Singleton
-        Bartender.Singleton = new Bartender();
+        if (Bartender.Singleton == null) Bartender.Singleton = new Bartender();
 
-        // Add Configuration
-
+        // Add Drinks to Bartender
+            // USAGE: Bartender.Singleton.addDrink(drink);
 
         // Return True
         return true;
@@ -59,6 +59,9 @@ public class AutoCode extends LinearOpMode {
     }
 
     public boolean InitializeModules() {
+
+        // Initialize Modules
+
 
         return true;
 
