@@ -3,6 +3,7 @@ This is the code for GFA's Red Team robot. If you are looking for GFA's Blue Tea
 
 ## Red Team Members
 - William McGonagle
+- Alden Grover
 - 
 
 ## Code Structure
