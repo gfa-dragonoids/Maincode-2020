@@ -2,6 +2,7 @@
 This is the code for GFA's Red Team robot. If you are looking for GFA's Blue Team robot code, it is located [here](github.com/gfa-dragonoids/Blueteam-2020). If you are another team looking to see how our code works, it is licensed under the ISC license. To learn more about the ISC license, [click here](https://en.wikipedia.org/wiki/ISC_license#:~:text=The%20ISC%20license%20is%20a,unnecessary%20following%20the%20Berne%20Convention.). But, in short, you can copy, modify, or delete any of our code, but you must make it clear that the code was from the GFA Dragonoid's 2020-2021 Red Team.
 
 ## Red Team Members
+- William McGonagle
 - 
 
 ## Code Structure
