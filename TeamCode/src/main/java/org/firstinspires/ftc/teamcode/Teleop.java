@@ -2,6 +2,15 @@
 // I am also using sublime text, and the robot is not even built yet.
 // So, I don't need anyone telling me the code is bad- I will commit the fixes.
 
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.util.Range;
+
 @TeleOp(name = "Autonomous Code", group = "code")
 public class AutoCode extends LinearOpMode {
 
@@ -9,10 +18,20 @@ public class AutoCode extends LinearOpMode {
     @Override public void runOpMode() {
 
         // Initialize the Bartender
-        if (!InitializeBartender()) return FailTeleop("Failed Initializing Bartender");
+        if (!InitializeBartender()) {
+
+            FailTeleop("Failed to Initialize the Bartender.");
+            return;
+
+        }
 
         // Initialize Modules
-        if (!InitializeModules()) return FailTeleop("Failed Initializing Modules.");
+        if (!InitializeModules()) {
+
+            FailTeleop("Failed to Initialize the Modules.");
+            return;
+
+        }
 
     }
 
