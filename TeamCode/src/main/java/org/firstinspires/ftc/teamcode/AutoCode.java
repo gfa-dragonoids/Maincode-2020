@@ -42,6 +42,11 @@ public class AutoCode extends LinearOpMode {
     public void FailTeleop(String error) {
 
         // Log the problem in the console.
+        System.out.println("Robot Error: " + error);
+
+        // Log the problem to the robot console
+
+
         // Save the current log to a file.
 
     }
