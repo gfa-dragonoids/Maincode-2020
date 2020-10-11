@@ -1,12 +1,14 @@
 package org.firstinspires.ftc.teamcode.drink;
 
+import java.util.Hashtable;
+
 public class DrinkObject {
 
     public String objectName;
 
-    public OutputObject Pipe(OutputObject previousOutput) {
+    public Hashtable<String, Object> Pipe(Hashtable<String, Object> previousOutput) {
 
-        return new OutputObject();
+        return null;
 
     }
 

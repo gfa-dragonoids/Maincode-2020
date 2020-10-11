@@ -1,6 +1,12 @@
 package org.firstinspires.ftc.teamcode.drink;
 
 import org.firstinspires.ftc.teamcode.module.Input;
+import org.firstinspires.ftc.teamcode.module.Math;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+import static org.firstinspires.ftc.teamcode.module.Input.*;
 
 public class CartAutoController extends DrinkObject {
 
@@ -8,16 +14,16 @@ public class CartAutoController extends DrinkObject {
     public float maxSpeed;
 
     // Pipe Function
-    public OutputObject Pipe(OutputObject input) {
+    public Hashtable<String, Object> Pipe(Hashtable<String, Object> input) {
 
         // Create a New Input Object based on Previous Input
-        OutputObject output = input;
+        Hashtable<String, Object> output = input;
 
         // Set Output to Vertical Move (Dummy Code)
-        output.motorLFOutput = Input.Singleton.getAxis("Cart_Vertical");
-        output.motorRFOutput = Input.Singleton.getAxis("Cart_Vertical");
-        output.motorLROutput = Input.Singleton.getAxis("Cart_Vertical");
-        output.motorRROutput = Input.Singleton.getAxis("Cart_Vertical");
+        output.put("motorLFOutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        output.put("motorRFOutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        output.put("motorLROutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        output.put("motorRROutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
 
         // Return the Output Object
         return output;
