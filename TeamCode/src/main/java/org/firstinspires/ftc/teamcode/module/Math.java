@@ -44,10 +44,36 @@ public class Math {
 
     }
 
+    // Tan Function
+        // A = Angle to Find the Tan of
+    public static float Tan(float a) {
+
+        return Sin(a) / Cos(a);
+
+    }
+
+    // Inverse Tan Function
+        // A = Angle To Find the Cot of
+    public static float Cot(float a) {
+
+        return Cos(a) / Sin(a);
+
+    }
+
+    // Cos Function
+        // A = Angle to Find the Cos of
     public static float Cos(float a) {
 
         // Unimplemented
         return 0f;
+
+    }
+
+    // Inverse Cos Function
+        // A = Angle To Find the Sec of
+    public static float Sec(float a) {
+
+        return 1 / Cos(a);
 
     }
 
@@ -66,6 +92,14 @@ public class Math {
             i++;
         }
         return cur;
+
+    }
+
+    // Inverse Sin Function
+        // A = Angle To Find the Csc of
+    public static float Csc(float a) {
+
+        return 1 / Sin(a);
 
     }
 
