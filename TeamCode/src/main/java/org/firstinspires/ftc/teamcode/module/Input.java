@@ -20,7 +20,7 @@ public class Input {
     // Preferences.
     public void setControllerConfig(InputConfig _config) {
 
-
+        config = _config;
 
     }
 
