@@ -6,10 +6,14 @@ public class Math {
     public static float Deg2Rad = PI / 180;
     public static float Rad2Deg = 180 / PI;
 
-    // Clamp Value Between Two Floats
-        // Val = Value to Clamp
-        // Min = Minimum Value
-        // Max = Maximum Value
+    /**
+     * Clamp Value Between Two Floating Point Numbers.
+     * @param max The Maximum Value for the Floating Point Number.
+     * @param min The Minimum Value for the Floating Point Number.
+     * @param val The Floating Point Number that Will Be Clamped.
+     * @return Clamped Floating Point Number
+     * @since 1.0
+     * **/
     public static float Clamp(float val, float min, float max) {
 
         if (val >= max) return max;
