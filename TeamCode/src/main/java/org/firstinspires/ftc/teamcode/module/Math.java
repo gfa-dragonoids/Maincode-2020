@@ -121,6 +121,27 @@ public class Math {
 
     }
 
+    // Stolen From https://stackoverflow.com/questions/3581528/how-is-the-square-root-function-implemented
+        // Val = Value to Be Square Rooted
+    public static float Sqrt(float val){
+        // Max and min are used to take into account numbers less than 1
+        float lo = Min(1, val);
+        float hi = Max(1, val);
+        float mid = 0f;
+
+        // Update the bounds to be off the target by a factor of 10
+        while(100 * lo * lo < val) lo *= 10;
+        while(100 * hi * hi > val) hi *= 0.1;
+
+        for(int i = 0 ; i < 100 ; i++){
+            mid = (lo+hi)/2;
+            if(mid*mid == val) return mid;
+            if(mid*mid > val) hi = mid;
+            else lo = mid;
+        }
+        return mid;
+    }
+
     // Check If Number is Base Two
         // Number - Number to Check If It's Base Two
     public static boolean IsBaseTwo(int number) {
