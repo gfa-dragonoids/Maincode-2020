@@ -7,6 +7,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.util.ReadWriteFile;
 
 import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
@@ -164,7 +165,7 @@ public class AutoCode extends LinearOpMode {
     public boolean InitializeModules() {
 
         // Initialize Modules
-        if (Input.Singleton == null) Input.Singleton = new Input();
+        if (Input.Singleton == null) Input.Singleton = new Input(gamepad1, gamepad2);
 
         // Since everything worked, return true.
         return true;
