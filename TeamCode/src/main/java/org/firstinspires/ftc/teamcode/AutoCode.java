@@ -27,11 +27,6 @@ public class AutoCode extends LinearOpMode {
     @Override
     public void runOpMode() {
 
-        // Log Status to Console.
-        telemetry.addData("Status", "Initializing Hardware.");
-        System.out.println("Initializing Hardware.");
-        telemetry.update();
-
         // Initialize the Hardware/ Check if Initializing Failed.
         if (!InitializeHardware()) {
 
@@ -39,12 +34,7 @@ public class AutoCode extends LinearOpMode {
             return;
 
         }
-
-        // Log Status to Console.
-        telemetry.addData("Status", "Initializing Bartender.");
-        System.out.println("Initializing Bartender.");
-        telemetry.update();
-
+        
         // Initialize the Bartender/ Check if Initializing Failed.
         if (!InitializeBartender()) {
 
@@ -52,11 +42,6 @@ public class AutoCode extends LinearOpMode {
             return;
 
         }
-
-        // Log Status to Console.
-        telemetry.addData("Status", "Initializing Modules.");
-        System.out.println("Initializing Modules.");
-        telemetry.update();
 
         // Initialize Modules/ Check if Initializing Failed.
         if (!InitializeModules()) {
@@ -103,7 +88,12 @@ public class AutoCode extends LinearOpMode {
      * @since ∞ + 1
      * **/
     public boolean InitializeHardware() {
-
+    
+        // Log Status to Console.
+        telemetry.addData("Status", "Initializing Hardware.");
+        System.out.println("Initializing Hardware.");
+        telemetry.update();
+        
         // Initialize all of the motors for the cart.
         rightFront = hardwareMap.dcMotor.get("rf");
         leftFront = hardwareMap.dcMotor.get("lf");
@@ -144,7 +134,12 @@ public class AutoCode extends LinearOpMode {
      * @since ∞ + 1
      * **/
     public boolean InitializeBartender() {
-
+    
+        // Log Status to Console.
+        telemetry.addData("Status", "Initializing Bartender.");
+        System.out.println("Initializing Bartender.");
+        telemetry.update();
+        
         // Create Singleton
         if (Bartender.Singleton == null) Bartender.Singleton = new Bartender();
 
@@ -158,15 +153,20 @@ public class AutoCode extends LinearOpMode {
 
     /**
      * Initialize the modules- this will allow for the drinks to access functions and info outside of themselves.
-     * @return  <code>true</code> The initialization of the modules was a success.
+     * @return  <code>true</code> The initialization of the modules was a success.<br>
      *          <code>false</code> The initialization of the modules has failed.
      * @since ∞ + 1
      * **/
     public boolean InitializeModules() {
-
+    
+        // Log Status to Console.
+        telemetry.addData("Status", "Initializing Modules.");
+        System.out.println("Initializing Modules.");
+        telemetry.update();
+        
         // Initialize Modules
         if (Input.Singleton == null) Input.Singleton = new Input(gamepad1, gamepad2);
-
+        
         // Since everything worked, return true.
         return true;
 
