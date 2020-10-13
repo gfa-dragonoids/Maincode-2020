@@ -20,11 +20,11 @@ public class CartAutoController extends DrinkObject {
         Hashtable<String, Object> output = input;
 
         // Set Output to Vertical Move (Dummy Code)
-        output.put("motorLFOutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
-        output.put("motorRFOutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
-        output.put("motorLROutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
-        output.put("motorRROutput", Math.Clamp(Singleton.getAxis("Cart_Vertical"), -1f, 1f));
-
+        output.put("motorLFOutput", Math.Clamp(Input.Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        output.put("motorRFOutput", Math.Clamp(Input.Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        output.put("motorLROutput", Math.Clamp(Input.Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        output.put("motorRROutput", Math.Clamp(Input.Singleton.getAxis("Cart_Vertical"), -1f, 1f));
+        
         // Return the Output Object
         return output;
 

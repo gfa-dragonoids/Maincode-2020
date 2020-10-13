@@ -40,7 +40,7 @@ public class Input {
     // Same as the Last Function, Except it is Loaded from a File
     public void setControllerConfigFromFile(InputConfig _config) {
 
-
+    
 
     }
 
