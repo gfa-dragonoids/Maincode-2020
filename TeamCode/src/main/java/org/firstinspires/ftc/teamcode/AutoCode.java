@@ -11,6 +11,7 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.util.ReadWriteFile;
 
 import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
+import org.firstinspires.ftc.teamcode.drink.MechanimManualController;
 import org.firstinspires.ftc.teamcode.module.Bartender;
 import org.firstinspires.ftc.teamcode.module.Input;
 
@@ -49,6 +50,16 @@ public class AutoCode extends LinearOpMode {
             FailTeleop("Failed to Initialize the Modules.");
             return;
 
+        }
+        
+        // Check for Stuffs
+        boolean stuffs = true;
+        
+        while(stuffs) {
+    
+            // Do Stuff
+            Bartender.Singleton.getDrinkOutput();
+            
         }
         
     }
@@ -145,6 +156,7 @@ public class AutoCode extends LinearOpMode {
 
         // Add Drinks to Bartender
             // USAGE: Bartender.Singleton.addDrink(drink);
+        Bartender.Singleton.addDrink(new MechanimManualController());
 
         // Since everything worked, return true.
         return true;
