@@ -55,6 +55,29 @@ public class Vector3 {
     }
 
     /**
+     * @return Returns the sin value of the vector
+     */
+    public float Sin(){
+        //o = z
+        //a = sqrt(x^2+y^2)
+        return (z/Magnitude());
+    }
+
+    /**
+     * @return Returns the cos value of the vector
+     */
+    public float Cos(){
+        return (Math.Sqrt((x * x) + (y * y))/Magnitude());
+    }
+
+    /**
+     * @return Returns the tan value of the vector
+     */
+    public float Tan(){
+        return (z/Math.Sqrt((x * x) + (y * y)));
+    }
+
+    /**
      * @return Returns the magnitude if only looking at the x and y axis
      */
     public float xyAxisMagnitude() {
