@@ -48,4 +48,72 @@ public class Vector2 {
 
     }
 
+    /**
+     * @return returns the sin value of the vector (sohcahtoa, soh, sin(a) = opposite/hypotonuse)
+     * @since 1.1
+     */
+    public float Sin(){
+        return (this.y/Magnitude());
+    }
+
+    /**
+     * @return returns the cos value of the vector (sohcahtoa, cha, cos(a) = adjacent/hypotonuse)
+     * @since 1.1
+     */
+    public float Cos(){
+        return (this.x/Magnitude());
+    }
+
+    /**
+     * @return returns the tan value of the vector (sohcahtoa, toa, tan(a) = opposite/adjacent)
+     * @since 1.1
+     */
+    public float Tan(){
+        return (this.y/this.x);
+    }
+
+    /**
+     * NOTE: Add function may not be correct, subject to change
+     * @return returns the values of the x and y vector components added together
+     * @since 1.1
+     */
+    public float Add(){
+        return (this.x + this.y);
+    }
+
+    /**
+     * NOTE: Subtract function may not be correct, subject to change
+     * @return returns the values of the y value subtracted from the x value
+     * @since 1.1
+     */
+    public float SubXY(){
+        return (this.x - this.y);
+    }
+
+    /**
+     * NOTE: Subtract function may not be correct, subject to change
+     * @return returns the values of the x value subtracted from the y value
+     * @since 1.1
+     */
+    public float SubYX(){
+        return (this.y - this.x);
+    }
+
+    /**
+     * NOTE: Multiply function may not be correct, subject to change
+     * @return returns the values of the x and y float values added together
+     * @since 1.1
+     */
+    public float FloatMult(){
+        return (this.x * this.y);
+    }
+
+    /**
+     * NOTE: Multiply function may not be correct, subject to change
+     * @return returns the int values of the x and y float values added together
+     * @since 1.1
+     */
+    public float IntMult(){
+        return (int(this.x) * int(this.y));
+    }
 }
