@@ -3,10 +3,10 @@ package org.firstinspires.ftc.teamcode.module;
 public class Vector3 {
 
     // NOTE: Sadly there is no operator overloading in Java, so we can not do things like shown below
-        // Number * Vector
-        // Vector * Vector
-        // Vector / Number
-        // Vector + Vector
+    // Number * Vector
+    // Vector * Vector
+    // Vector / Number
+    // Vector + Vector
 
     // Values
     public float x;
@@ -54,4 +54,93 @@ public class Vector3 {
 
     }
 
+    /**
+     * @return Returns the magnitude if only looking at the x and y axis
+     */
+    public float xyAxisMagnitude() {
+        return Math.Sqrt((x*x) + (y*y));
+    }
+
+    /**
+     * @return Returns the magnitude if only looking at the y and z axis
+     */
+    public float yzAxisMagnitude() {
+        return Math.Sqrt((y*y) + (z*z));
+    }
+
+    /**
+     * @return Returns the magnitude if only looking at the x and z axis
+     */
+    public float xzAxisMagnitude() {
+        return Math.Sqrt((x*x) + (z*z));
+    }
+
+    /**
+     * @return returns the sin value if only looking at the x and y axis
+     */
+    public float xySin(){
+        //o = y
+        //a = x
+        return y/xyAxisMagnitude();
+    }
+
+    /**
+     * @return returns the cos value if only looking at the x and y axis
+     */
+    public float xyCos(){
+        return x/xyAxisMagnitude();
+    }
+
+    /**
+     * @return returns the tan value if only looking at the x and y axis
+     */
+    public float xyTan(){
+        return(y/x);
+    }
+
+    /**
+     * @return returns the sin value if only looking at the y and z axis
+     */
+    public float yzSin(){
+        //o = z
+        //a = y
+        return z/yzAxisMagnitude();
+    }
+
+    /**
+     * @return returns the cos value if only looking at the y and z axis
+     */
+    public float yzCos(){
+        return y/yzAxisMagnitude();
+    }
+
+    /**
+     * @return returns the tan value if only looking at the y and z axis
+     */
+    public float yzTan(){
+        return y/z;
+    }
+
+    /**
+     * @return returns the sin value if only looking at the x and z axis
+     */
+    public float xzSin() {
+        //o = z
+        //a = x
+        return x / xzAxisMagnitude();
+    }
+
+    /**
+     * @return returns the cos value if only looking at the x and z axis
+     */
+    public float xzCos(){
+        return x/xzAxisMagnitude();
+    }
+
+    /**
+     * @return returns the tan value if only looking at the x and z axis
+     */
+    public float xzTan(){
+        return x/z;
+    }
 }
