@@ -154,4 +154,43 @@ public class Vector3 {
         return new Vector3(-x, -y, -z);
 
     }
+
+    /**
+     * Add two vectors together.
+     * @param a The first Vector3 that is being added.
+     * @param b The second Vector3 that is being added.
+     * @return The sum of the two Vector2's.
+     * @since 1.1
+     **/
+    public static Vector3 Add(Vector3 a, Vector3 b) {
+
+        return new Vector3(a.x + b.x, a.y + b.y, a.z + b.z);
+
+    }
+
+    /**
+     * Multiply two vectors together.
+     * @param a The first Vector3 that is being multiplied.
+     * @param b The second Vector3 that is being multiplied.
+     * @return The product of the two Vector2's.
+     * @since 1.1
+     **/
+    public static Vector3 Multiply(Vector3 a, Vector3 b) {
+
+        return new Vector3(a.x * b.x, a.y * b.y, a.z * b.z);
+
+    }
+
+    /**
+     * Multiply a vector by a float.
+     * @param a The Vector3 that is being multiplied.
+     * @param b The coefficient of the Vector3- a floating point number.
+     * @return The product of the Vector2 and the float.
+     * @since 1.1
+     **/
+    public static Vector3 MultiplyFloat(Vector3 a, float b) {
+
+        return new Vector3(b * a.x, b * a.y, b * a.z);
+
+    }
 }
