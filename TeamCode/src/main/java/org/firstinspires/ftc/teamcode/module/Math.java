@@ -288,25 +288,26 @@ public class Math {
     }
 
     /**
-     * @param val The floating point number
-     * @return int of val but rounded up if not a whole number, regardless of the decimal
+     * Round a number upwards to the highest whole number within reach.
+     * @param val The floating point number to ceil.
+     * @return Ceiled version of val.
      * @since 1.1
      */
-    public static float Ceil(float val){
+    public static float Ceil(float val) {
 
-        return (val == (float)((int)val)) ? val + 1 : val;
+        return (val == (float)((int)val)) ? ((int)val + 1) : ((int)val);
 
     }
 
     /**
-     *
-     * @param val The floating point number
-     * @return int of val but rounded down if not a whole number, regardless of the decimal
+     * Round a number downwards to the lowest whole number within reach.
+     * @param val The floating point number to floor.
+     * @return Floored version of val.
      * @since 1.1
      */
-    public static float floor(float val){
+    public static float Floor(float val) {
 
-        return (val == (float)((int)val)) ? val : val - 1;
+        return (val == (float)((int)val)) ? ((int)val) : ((int)val - 1);
 
     }
 }
