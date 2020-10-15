@@ -287,4 +287,26 @@ public class Math {
 
     }
 
+    /**
+     * @param val The floating point number
+     * @return int of val but rounded up if not a whole number, regardless of the decimal
+     * @since 1.1
+     */
+    public static float Ceil(float val){
+
+        return (val == (float)((int)val)) ? val + 1 : val;
+
+    }
+
+    /**
+     *
+     * @param val The floating point number
+     * @return int of val but rounded down if not a whole number, regardless of the decimal
+     * @since 1.1
+     */
+    public static float floor(float val){
+
+        return (val == (float)((int)val)) ? val : val - 1;
+
+    }
 }
