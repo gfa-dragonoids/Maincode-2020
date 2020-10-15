@@ -94,8 +94,8 @@ public class Vector2 {
     
     /**
     * Add two vectors together.
-    * @param The first Vector2 that is being added.
-    * @param The second Vector2 that is being added.
+    * @param a The first Vector2 that is being added.
+    * @param b The second Vector2 that is being added.
     * @return The sum of the two Vector2's.
     * @since 1.1
     **/
@@ -107,8 +107,8 @@ public class Vector2 {
     
     /**
     * Multiply two vectors together.
-    * @param The first Vector2 that is being multiplied.
-    * @param The second Vector2 that is being multiplied.
+    * @param a The first Vector2 that is being multiplied.
+    * @param b The second Vector2 that is being multiplied.
     * @return The product of the two Vector2's.
     * @since 1.1
     **/
@@ -120,8 +120,8 @@ public class Vector2 {
     
     /**
     * Multiply a vector by a float. 
-    * @param The Vector2 that is being multiplied.
-    * @param The coefficient of the Vector2- a floating point number.
+    * @param a The Vector2 that is being multiplied.
+    * @param b The coefficient of the Vector2- a floating point number.
     * @return The product of the Vector2 and the float.
     * @since 1.1
     **/
