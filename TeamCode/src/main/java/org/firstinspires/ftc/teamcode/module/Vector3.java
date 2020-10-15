@@ -143,4 +143,15 @@ public class Vector3 {
     public float xzTan(){
         return x/z;
     }
+
+    /**
+     * Get the negative version of the current vector- the sum of a vector and it's negative should be equal to (0, 0).
+     * @return The negative Vector3.
+     * @since 1.1
+     **/
+    public Vector3 Negative() {
+
+        return new Vector3(-x, -y, -z);
+
+    }
 }
