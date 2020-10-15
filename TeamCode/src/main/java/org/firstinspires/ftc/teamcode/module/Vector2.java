@@ -1,5 +1,4 @@
 package org.firstinspires.ftc.teamcode.module;
-import java.lang.Math;
 
 import java.util.Vector;
 
@@ -50,71 +49,86 @@ public class Vector2 {
     }
 
     /**
-     * @return returns the sin value of the vector (sohcahtoa, soh, sin(a) = opposite/hypotonuse)
+     * Find the sine value of a vector- based on basic trigonometry. 
+     * @return The floating point sine value of the vector.
      * @since 1.1
      */
-    public float Sin(){
-        return (this.y/Magnitude());
+    public float Sin() {
+        
+        return y / Magnitude();
+    
     }
 
     /**
-     * @return returns the cos value of the vector (sohcahtoa, cha, cos(a) = adjacent/hypotonuse)
+     * Find the cosine value of a vector- based on basic trigonometry.
+     * @return The floating point cosine value of the vector.
      * @since 1.1
      */
-    public float Cos(){
-        return (this.x/Magnitude());
+    public float Cos() {
+        
+        return x / Magnitude();
+    
     }
 
     /**
-     * @return returns the tan value of the vector (sohcahtoa, toa, tan(a) = opposite/adjacent)
+     * Find the tangential value of a vector- based on basic trigonometry.
+     * @return The floating point tangential value of the vector.
      * @since 1.1
      */
-    public float Tan(){
-        return (this.y/this.x);
+    public float Tan() {
+        
+        return y / x;
+    
     }
 
     /**
-     * NOTE: Add function may not be correct, subject to change
-     * @return returns the values of the x and y vector components added together
-     * @since 1.1
-     */
-    public float Add(){
-        return (this.x + this.y);
+    * Get the negative version of the current vector- the sum of a vector and it's negative should be equal to (0, 0).
+    * @return The negative Vector2.
+    * @since 1.1
+    **/
+    public Vector2 Negative() {
+    
+        return new Vector2(-x, -y);
+    
     }
-
+    
     /**
-     * NOTE: Subtract function may not be correct, subject to change
-     * @return returns the values of the y value subtracted from the x value
-     * @since 1.1
-     */
-    public float SubXY(){
-        return (this.x - this.y);
+    * Add two vectors together.
+    * @param The first Vector2 that is being added.
+    * @param The second Vector2 that is being added.
+    * @return The sum of the two Vector2's.
+    * @since 1.1
+    **/
+    public static Vector2 Add(Vector2 a, Vector2 b) {
+    
+        return new Vector2(a.x + b.x, a.y + b.y);
+    
     }
-
+    
     /**
-     * NOTE: Subtract function may not be correct, subject to change
-     * @return returns the values of the x value subtracted from the y value
-     * @since 1.1
-     */
-    public float SubYX(){
-        return (this.y - this.x);
+    * Multiply two vectors together.
+    * @param The first Vector2 that is being multiplied.
+    * @param The second Vector2 that is being multiplied.
+    * @return The product of the two Vector2's.
+    * @since 1.1
+    **/
+    public static Vector2 Multiply(Vector2 a, Vector2 b) {
+    
+        return new Vector2(a.x * b.x, a.y * b.y);
+    
     }
-
+    
     /**
-     * NOTE: Multiply function may not be correct, subject to change
-     * @return returns the values of the x and y float values added together
-     * @since 1.1
-     */
-    public float FloatMult(){
-        return (this.x * this.y);
+    * Multiply a vector by a float. 
+    * @param The Vector2 that is being multiplied.
+    * @param The coefficient of the Vector2- a floating point number.
+    * @return The product of the Vector2 and the float.
+    * @since 1.1
+    **/
+    public static Vector2 MultiplyFloat(Vector2 a, float b) {
+    
+        return new Vector2(b * a.x, b * a.y);
+    
     }
-
-    /**
-     * NOTE: Multiply function may not be correct, subject to change
-     * @return returns the int values of the x and y float values added together
-     * @since 1.1
-     */
-    public float IntMult(){
-        return (Math.round(this.x) * Math.round(this.y));
-    }
+    
 }
