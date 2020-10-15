@@ -56,6 +56,7 @@ public class Vector3 {
 
     /**
      * @return Returns the sin value of the vector
+     * @since 1.1
      */
     public float Sin(){
         //o = z
@@ -65,6 +66,7 @@ public class Vector3 {
 
     /**
      * @return Returns the cos value of the vector
+     * @since 1.1
      */
     public float Cos(){
         return (Math.Sqrt((x * x) + (y * y))/Magnitude());
@@ -72,6 +74,7 @@ public class Vector3 {
 
     /**
      * @return Returns the tan value of the vector
+     * @since 1.1
      */
     public float Tan(){
         return (z/Math.Sqrt((x * x) + (y * y)));
@@ -93,6 +96,7 @@ public class Vector3 {
 
     /**
      * @return Returns the magnitude if only looking at the x and z axis
+     * @since 1.1
      */
     public float xzAxisMagnitude() {
         return Math.Sqrt((x*x) + (z*z));
@@ -100,6 +104,7 @@ public class Vector3 {
 
     /**
      * @return returns the sin value if only looking at the x and y axis
+     * @since 1.1
      */
     public float xySin(){
         //o = y
@@ -109,6 +114,7 @@ public class Vector3 {
 
     /**
      * @return returns the cos value if only looking at the x and y axis
+     * @since 1.1
      */
     public float xyCos(){
         return x/xyAxisMagnitude();
@@ -116,6 +122,7 @@ public class Vector3 {
 
     /**
      * @return returns the tan value if only looking at the x and y axis
+     * @since 1.1
      */
     public float xyTan(){
         return(y/x);
@@ -123,6 +130,7 @@ public class Vector3 {
 
     /**
      * @return returns the sin value if only looking at the y and z axis
+     * @since 1.1
      */
     public float yzSin(){
         //o = z
@@ -132,6 +140,7 @@ public class Vector3 {
 
     /**
      * @return returns the cos value if only looking at the y and z axis
+     * @since 1.1
      */
     public float yzCos(){
         return y/yzAxisMagnitude();
@@ -139,6 +148,7 @@ public class Vector3 {
 
     /**
      * @return returns the tan value if only looking at the y and z axis
+     * @since 1.1
      */
     public float yzTan(){
         return y/z;
@@ -146,6 +156,7 @@ public class Vector3 {
 
     /**
      * @return returns the sin value if only looking at the x and z axis
+     * @since 1.1
      */
     public float xzSin() {
         //o = z
@@ -155,6 +166,7 @@ public class Vector3 {
 
     /**
      * @return returns the cos value if only looking at the x and z axis
+     * @since 1.1
      */
     public float xzCos(){
         return x/xzAxisMagnitude();
@@ -162,6 +174,7 @@ public class Vector3 {
 
     /**
      * @return returns the tan value if only looking at the x and z axis
+     * @since 1.1
      */
     public float xzTan(){
         return x/z;
