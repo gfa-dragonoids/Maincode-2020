@@ -1,4 +1,5 @@
 package org.firstinspires.ftc.teamcode.module;
+import java.lang.Math;
 
 import java.util.Vector;
 
@@ -114,6 +115,9 @@ public class Vector2 {
      * @since 1.1
      */
     public float IntMult(){
-        return (int(this.x) * int(this.y));
+        int intX = Math.round(this.x);
+        int intY = Math.round(this.y);
+
+        return (intX * intY);
     }
 }
