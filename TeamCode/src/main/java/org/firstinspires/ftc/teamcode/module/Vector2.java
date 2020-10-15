@@ -115,9 +115,6 @@ public class Vector2 {
      * @since 1.1
      */
     public float IntMult(){
-        int intX = Math.round(this.x);
-        int intY = Math.round(this.y);
-
-        return (intX * intY);
+        return (Math.round(this.x) * Math.round(this.y));
     }
 }
