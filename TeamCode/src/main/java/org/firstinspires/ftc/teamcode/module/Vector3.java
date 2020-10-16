@@ -75,6 +75,26 @@ public class Vector3 {
     }
 
     /**
+     * Get the current sine of the vector based on its orientation.
+     * @param orientation The axis to get the sine of.
+     * @return A floating poitn number representing the sine of the vector3's axis.
+     * @since 1.1
+     **/
+    public float Sin(AxisOrientation orientation) {
+    
+        switch (orientation) {
+        
+            case orientation.XY:
+                return y / Magnitude();
+            case orientation.ZY:
+                return y / Magnitude();
+            case orientation.XZ:
+                return z / Magnitude();
+        }
+    
+    }
+    
+    /**
      * Get the negative version of the current vector- the sum of a vector and it's negative should be equal to (0, 0, 0).
      * @return The negative Vector3.
      * @since 1.1
