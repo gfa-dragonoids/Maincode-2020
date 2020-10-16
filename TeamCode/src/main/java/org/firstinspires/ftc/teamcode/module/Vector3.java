@@ -77,7 +77,7 @@ public class Vector3 {
     /**
      * Get the current sine of the vector based on its orientation.
      * @param orientation The axis to get the sine of.
-     * @return A floating poitn number representing the sine of the vector3's axis.
+     * @return A floating point number representing the sine of the vector3's axis.
      * @since 1.1
      **/
     public float Sin(AxisOrientation orientation) {
@@ -90,6 +90,27 @@ public class Vector3 {
                 return y / Magnitude();
             case orientation.XZ:
                 return z / Magnitude();
+        }
+    
+    }
+    
+    /**
+     * Get the current cosine of the vector based on its orientation.
+     * @param orientation The axis to get the cosine of.
+     * @return A floating point number representing the cosine of the vector3's axis.
+     * @since 1.1
+     **/
+    public float Cos(AxisOrientation orientation) {
+    
+        switch (orientation) {
+        
+            case orientation.XY:
+                return x / Magnitude();
+            case orientation.ZY:
+                return z / Magnitude();
+            case orientation.XZ:
+                return x / Magnitude();
+        
         }
     
     }
