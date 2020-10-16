@@ -53,135 +53,29 @@ public class Vector3 {
         return new Vector3(x / magnitude, y / magnitude, z / magnitude);
 
     }
-
+    
     /**
-     * @return Returns the sin value of the vector
-     * @since 1.1
-     */
-    public float Sin(){
-        //o = z
-        //a = sqrt(x^2+y^2)
-        return (z/Magnitude());
+    * Get the current tangential of the vector based on its orientation.
+    * @param orientation The axis to get the tangential of.
+    * @return A floating point number representing the tangential of the vector3's axis.
+    * @since 1.1
+    **/
+    public float Tan(AxisOrientation orientation) {
+    
+        switch (orientation) {
+        
+            case orientation.XY:
+                return y / x;
+            case orientation.ZY:
+                return y / z;
+            case orientation.XZ:
+                return z / x;
+        }
+    
     }
 
     /**
-     * @return Returns the cos value of the vector
-     * @since 1.1
-     */
-    public float Cos(){
-        return (Math.Sqrt((x * x) + (y * y))/Magnitude());
-    }
-
-    /**
-     * @return Returns the tan value of the vector
-     * @since 1.1
-     */
-    public float Tan(){
-        return (z/Math.Sqrt((x * x) + (y * y)));
-    }
-
-    /**
-     * @return Returns the magnitude if only looking at the x and y axis
-     */
-    public float xyAxisMagnitude() {
-        return Math.Sqrt((x*x) + (y*y));
-    }
-
-    /**
-     * @return Returns the magnitude if only looking at the y and z axis
-     */
-    public float yzAxisMagnitude() {
-        return Math.Sqrt((y*y) + (z*z));
-    }
-
-    /**
-     * @return Returns the magnitude if only looking at the x and z axis
-     * @since 1.1
-     */
-    public float xzAxisMagnitude() {
-        return Math.Sqrt((x*x) + (z*z));
-    }
-
-    /**
-     * @return returns the sin value if only looking at the x and y axis
-     * @since 1.1
-     */
-    public float xySin(){
-        //o = y
-        //a = x
-        return y/xyAxisMagnitude();
-    }
-
-    /**
-     * @return returns the cos value if only looking at the x and y axis
-     * @since 1.1
-     */
-    public float xyCos(){
-        return x/xyAxisMagnitude();
-    }
-
-    /**
-     * @return returns the tan value if only looking at the x and y axis
-     * @since 1.1
-     */
-    public float xyTan(){
-        return(y/x);
-    }
-
-    /**
-     * @return returns the sin value if only looking at the y and z axis
-     * @since 1.1
-     */
-    public float yzSin(){
-        //o = z
-        //a = y
-        return z/yzAxisMagnitude();
-    }
-
-    /**
-     * @return returns the cos value if only looking at the y and z axis
-     * @since 1.1
-     */
-    public float yzCos(){
-        return y/yzAxisMagnitude();
-    }
-
-    /**
-     * @return returns the tan value if only looking at the y and z axis
-     * @since 1.1
-     */
-    public float yzTan(){
-        return y/z;
-    }
-
-    /**
-     * @return returns the sin value if only looking at the x and z axis
-     * @since 1.1
-     */
-    public float xzSin() {
-        //o = z
-        //a = x
-        return x / xzAxisMagnitude();
-    }
-
-    /**
-     * @return returns the cos value if only looking at the x and z axis
-     * @since 1.1
-     */
-    public float xzCos(){
-        return x/xzAxisMagnitude();
-    }
-
-    /**
-     * @return returns the tan value if only looking at the x and z axis
-     * @since 1.1
-     */
-    public float xzTan(){
-        return x/z;
-    }
-
-    /**
-     * Get the negative version of the current vector- the sum of a vector and it's negative should be equal to (0, 0).
+     * Get the negative version of the current vector- the sum of a vector and it's negative should be equal to (0, 0, 0).
      * @return The negative Vector3.
      * @since 1.1
      **/
@@ -195,7 +89,7 @@ public class Vector3 {
      * Add two vectors together.
      * @param a The first Vector3 that is being added.
      * @param b The second Vector3 that is being added.
-     * @return The sum of the two Vector2's.
+     * @return The sum of the two Vector3's.
      * @since 1.1
      **/
     public static Vector3 Add(Vector3 a, Vector3 b) {
@@ -208,7 +102,7 @@ public class Vector3 {
      * Multiply two vectors together.
      * @param a The first Vector3 that is being multiplied.
      * @param b The second Vector3 that is being multiplied.
-     * @return The product of the two Vector2's.
+     * @return The product of the two Vector3's.
      * @since 1.1
      **/
     public static Vector3 Multiply(Vector3 a, Vector3 b) {
@@ -221,12 +115,18 @@ public class Vector3 {
      * Multiply a vector by a float.
      * @param a The Vector3 that is being multiplied.
      * @param b The coefficient of the Vector3- a floating point number.
-     * @return The product of the Vector2 and the float.
+     * @return The product of the Vector3 and the float.
      * @since 1.1
      **/
     public static Vector3 MultiplyFloat(Vector3 a, float b) {
 
         return new Vector3(b * a.x, b * a.y, b * a.z);
 
+    }
+    
+    public enum AxisOrientation {
+        XY,
+        ZY,
+        XZ
     }
 }
