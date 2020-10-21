@@ -64,14 +64,14 @@ public class Vector3 {
     
         switch (orientation) {
         
-            case orientation.XY:
+            case XY:
                 return y / x;
-            case orientation.ZY:
+            case ZY:
                 return y / z;
-            case orientation.XZ:
+            case XZ:
                 return z / x;
         }
-    
+        return 0;
     }
 
     /**
@@ -84,14 +84,14 @@ public class Vector3 {
     
         switch (orientation) {
         
-            case orientation.XY:
+            case XY:
                 return y / Magnitude();
-            case orientation.ZY:
+            case ZY:
                 return y / Magnitude();
-            case orientation.XZ:
+            case XZ:
                 return z / Magnitude();
         }
-    
+        return 0;
     }
     
     /**
@@ -103,16 +103,16 @@ public class Vector3 {
     public float Cos(AxisOrientation orientation) {
     
         switch (orientation) {
-        
-            case orientation.XY:
+
+            case XY:
                 return x / Magnitude();
-            case orientation.ZY:
+            case ZY:
                 return z / Magnitude();
-            case orientation.XZ:
+            case XZ:
                 return x / Magnitude();
-        
+
         }
-    
+        return 0;
     }
     
     /**
