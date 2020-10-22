@@ -1,4 +1,4 @@
 package org.firstinspires.ftc.teamcode.drink;
 
-public class MechanimAutoController {
+public class MechanimAutoController extends DrinkObject{
 }
